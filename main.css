@@ -14,8 +14,23 @@ a {
     margin: 10px;
 }
 
+a.active {
+    color: purple;
+}
+
+/* not something we should need to do often if ever */
+a:not(.active) {
+    color: blue;
+}
+
+
 .main-section {
     height: 800px;
-    border: 1px solid #ccc;
+    /* overrules specificity and all other rules - can be problematic so avoid if possible */
+    border: 1px solid #ccc !important;
     padding: 16px;
+}
+
+.highlighted {
+    border: 2px solid #fa923f;
 }
